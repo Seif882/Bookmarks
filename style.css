@@ -1,0 +1,58 @@
+body {
+    background-color: #F7ECDE;
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+.bg-grey {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    width: fit-content;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #FEC260;
+    transition: 0.5s;
+}
+
+h1:hover::after {
+    height: 40px;
+}
+
+#formSection {
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+}
+
+h2 {
+    font-family: "Righteous", sans-serif;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+}
+
+#submitBtn {
+    background-color: #d1512d;
+    transition: 0.3s;
+}
+
+#submitBtn:hover {
+    background-color: #a03315;
+}
+
+.bookmark-info {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+    font-family: "Righteous", sans-serif;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Bookmarks</title>
+    <link rel="icon" href="images/bookmark_1f516.png" />
+  </head>
+  <body class="pt-5">
+    <div
+      class="modal"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">
+              Input Error
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="fw-bold fs-5">
+              Site Name or Url is not valid, Please follow the rules below :
+            </p>
+            <p class="fs-6">
+              <i class="fa-regular fa-circle-right text-danger"></i> Site name
+              must contain at least 3 characters
+            </p>
+            <p class="fs-6">
+              <i class="fa-regular fa-circle-right text-danger"></i> Site URL
+              must be a valid one
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1
+      class="text-center display-5 position-relative overflow-hidden m-auto my-5"
+    >
+      Bookmarker
+    </h1>
+
+    <section id="formSection" class="container py-3">
+      <h2 class="text-center fs-4">
+        <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+      <label for="bookmarkName" class="my-3 fw-bold">
+        <i class="fa-solid fa-book-bookmark"></i> Site Name</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="bookmarkName"
+        placeholder="Bookmark Name"
+      />
+      <label for="address" class="my-3 fw-bold"
+        ><i class="fa-solid fa-link"></i> Site URL</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="address"
+        placeholder="Website URL"
+      />
+      <button
+        id="submitBtn"
+        class="btn px-5 text-white m-auto my-4"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Submit
+      </button>
+    </section>
+
+    <section class="container my-3 bg-white">
+      <div class="row py-2 fw-bold">
+        <span class="col-3 text-center">Index</span>
+        <span class="col-3 text-center">Website Name</span>
+        <span class="col-3 text-center">Visit</span>
+        <span class="col-3 text-center">Delete</span>
+      </div>
+      <div id="bookmarks"></div>
+    </section>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
